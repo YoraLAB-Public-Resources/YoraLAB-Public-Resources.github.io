@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Privacy Policy — Quick Add for Blitzit</title>
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <main>
+    <article>
+      <h1>Privacy Policy</h1>
+      <p class="meta"><strong>Quick Add for Blitzit</strong><br>Last updated: August 25, 2026</p>
+
+      <div class="notice">
+        Quick Add for Blitzit is an unofficial Chrome extension that lets a user create tasks in the user's own Blitzit account through a Blitzit Incoming Webhook. It is not affiliated with or endorsed by Blitzit App Ltd.
+      </div>
+
+      <h2>1. Data handled by the extension</h2>
+      <p>The extension handles only data needed for its task-creation purpose:</p>
+      <ul>
+        <li>List Profile names, the selected default List, Default Schedule values, and shortcut assignments entered by the user;</li>
+        <li>the Blitzit Incoming Webhook URL and Signing Secret entered by the user;</li>
+        <li>task content entered by the user, including Title, Schedule, Date, Time, and optional Notes;</li>
+        <li>a randomly generated external task identifier used for each create request; and</li>
+        <li>limited response fields returned by Blitzit for the submitted request.</li>
+      </ul>
+      <p>This version does not read browsing history, current-page URLs, page titles, page content, selected text, cookies, or other website data. It does not use a Content Script.</p>
+
+      <h2>2. How data is used</h2>
+      <p>List Profile settings and shortcut assignments are used locally to present and operate the extension. The Webhook URL and Signing Secret are used only to authenticate the task-create request chosen by the user. Task content is converted to the required Blitzit Webhook fields and sent to the configured Blitzit endpoint only when the user sends a task.</p>
+      <p>The extension does not use data for advertising, profiling, credit decisions, or any purpose unrelated to its task-creation function.</p>
+
+      <h2>3. Storage and security</h2>
+      <p>Ordinary profile settings are stored locally in Chrome extension storage. The Webhook URL and Signing Secret are encrypted locally with AES-GCM before their encrypted records are stored. The non-extractable encryption key is stored in the extension's IndexedDB database.</p>
+      <p>Plaintext credentials are processed only inside the extension's trusted Service Worker boundary. Authenticated requests are limited to HTTPS endpoints under <code>https://webhook.blitzit.app/v1/inbound/</code>, reject redirects, omit ambient browser credentials, and use a bounded timeout.</p>
+      <p>Task content is not retained as a separate local task history or ledger after submission.</p>
+
+      <h2>4. Data sharing and transfers</h2>
+      <p>Task content, the generated task identifier, and the authentication information required by the configured Incoming Webhook are transmitted directly from the extension to Blitzit over HTTPS. Blitzit receives and processes that data under its own terms and privacy practices.</p>
+      <p>No developer-operated server receives extension data. The extension does not sell user data or share it with advertising platforms or data brokers. The extension developer does not receive the data and does not allow developer personnel to read it.</p>
+
+      <h2>5. Retention and deletion</h2>
+      <p>Local settings and encrypted credential records remain in the extension's local storage until the user changes or deletes them. Deleting a List Profile removes its saved credential record. The Options page also provides a credential-vault reset that removes all saved Webhook credentials and the local encryption key; profile display settings remain so credentials can be re-entered.</p>
+      <p>Uninstalling the extension removes its extension-scoped local data according to Chrome's normal extension-storage behavior. Data already submitted to Blitzit is controlled through the user's Blitzit account and is not retained or deletable by this extension.</p>
+
+      <h2>6. Chrome Web Store Limited Use</h2>
+      <p>The extension's use of information received from Chrome APIs complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. Data is used and transferred only as necessary to provide the extension's disclosed single purpose.</p>
+
+      <h2>7. Changes and contact</h2>
+      <p>If a future version changes its data handling, the disclosure and this policy will be updated before that change is distributed. Privacy or support questions can be submitted through the support channel shown on this extension's Chrome Web Store listing.</p>
+
+      <footer>
+        Quick Add for Blitzit — Privacy Policy
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
