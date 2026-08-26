@@ -11,7 +11,7 @@
   <main>
     <article>
       <h1>Privacy Policy</h1>
-      <p class="meta"><strong>Quick Add for Blitzit</strong><br>Last updated: August 25, 2026</p>
+      <p class="meta"><strong>Quick Add for Blitzit</strong><br>Last updated: August 26, 2026</p>
 
       <div class="notice">
         Quick Add for Blitzit is an unofficial Chrome extension that lets a user create tasks in the user's own Blitzit account through a Blitzit Incoming Webhook. It is not affiliated with or endorsed by Blitzit App Ltd.
@@ -34,7 +34,7 @@
 
       <h2>3. Storage and security</h2>
       <p>Ordinary profile settings are stored locally in Chrome extension storage. The Webhook URL and Signing Secret are encrypted locally with AES-GCM before their encrypted records are stored. The non-extractable encryption key is stored in the extension's IndexedDB database.</p>
-      <p>Plaintext credentials are processed only inside the extension's trusted Service Worker boundary. Authenticated requests are limited to HTTPS endpoints under <code>https://webhook.blitzit.app/v1/inbound/</code>, reject redirects, omit ambient browser credentials, and use a bounded timeout.</p>
+      <p>Credentials are entered in the extension's Options page and sent directly within the extension to its trusted Service Worker. Saved credentials are decrypted, destination-validated, and attached to authenticated requests only by the Service Worker. Authenticated requests are limited to HTTPS endpoints under <code>https://webhook.blitzit.app/v1/inbound/</code>, reject redirects, omit ambient browser credentials, and use a bounded timeout.</p>
       <p>Task content is not retained as a separate local task history or ledger after submission.</p>
 
       <h2>4. Data sharing and transfers</h2>
