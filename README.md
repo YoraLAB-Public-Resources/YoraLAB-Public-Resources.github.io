@@ -7,6 +7,8 @@ This repository contains only resources that are intentionally published. Projec
 ## Current resources
 
 - `quick-add-for-blitzit/privacy/` — Privacy Policy for Quick Add for Blitzit
+- `personal-health-mcp/` — Public information for Personal Health MCP
+- `personal-health-mcp/privacy/` — Privacy Policy for Personal Health MCP
 
 ## Publishing boundary
 

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Health MCP</title>
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <main>
+    <article>
+      <h1>Personal Health MCP</h1>
+      <p class="meta">A private, owner-operated bridge for on-demand access to the owner's Google Health data.</p>
+
+      <div class="notice">
+        Personal Health MCP is an unofficial personal project. It is not affiliated with, sponsored by, or endorsed by Google, Fitbit, Cloudflare, or OpenAI.
+      </div>
+
+      <h2>Purpose</h2>
+      <p>Personal Health MCP lets its owner ask an explicitly approved MCP-compatible client for read-only health information, summaries, and bounded period comparisons. It is designed for questions about sleep, recovery signals, physical activity, and data freshness.</p>
+      <p>The service returns measurements and clearly identified derived comparisons. It is not a medical device, does not provide a medical diagnosis, and is not a substitute for professional medical advice.</p>
+
+      <h2>How access works</h2>
+      <ul>
+        <li>The owner must authorize both the MCP client and Google access.</li>
+        <li>Google Health data is requested on demand for the owner's current question.</li>
+        <li>Access is read-only and limited to approved capability and scope allowlists.</li>
+        <li>The deployed service accepts only the configured owner's Google account and owner-approved MCP grants.</li>
+        <li>There is no public user-registration or health-data sharing service.</li>
+      </ul>
+
+      <h2>Data categories</h2>
+      <p>Depending on the permissions the owner chooses to grant, the service may access sleep information, health metrics and measurements, activity and fitness information, and settings or paired-device synchronization metadata. It does not request Google Health write permissions.</p>
+
+      <h2>Data handling summary</h2>
+      <p>Health data is retrieved from Google Health and processed transiently by the service running on Cloudflare Workers. The service does not maintain a persistent archive of raw health measurements. Results are returned only to the MCP client selected and authorized by the owner, such as ChatGPT or Codex when the owner connects one of those clients.</p>
+      <p>Authentication credentials and minimal non-health authorization state are retained only as needed to maintain, secure, replace, or revoke an approved connection. Normal application logs are designed not to contain health payloads or credentials.</p>
+
+      <h2>Privacy</h2>
+      <p>For details about access, use, sharing, storage, retention, deletion, and user controls, read the <a href="/personal-health-mcp/privacy/">Personal Health MCP Privacy Policy</a>.</p>
+
+      <h2>Support</h2>
+      <p>Privacy or support questions may be submitted through the <a href="https://github.com/YoraLAB-Public-Resources/YoraLAB-Public-Resources.github.io/issues">public resources repository issue tracker</a>. Do not include health data, credentials, or other sensitive information in a public issue.</p>
+
+      <footer>
+        Personal Health MCP — Public Information
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
