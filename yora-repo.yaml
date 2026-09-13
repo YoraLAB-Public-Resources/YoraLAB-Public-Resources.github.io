@@ -1,0 +1,6 @@
+schema_version: 1
+class: special
+domain: yora-foundation
+user_type: human
+type: knowledge
+catalog_views: []
